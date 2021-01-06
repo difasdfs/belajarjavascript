@@ -1,0 +1,68 @@
+TIPE DATA DALAM JAVASCRIPT
+1. Number - tidak ada integer, hanya ada floating point
+2. String - bisa kutip 1 atau kutip 2
+3. Boolean
+4. Object
+5. Function
+6. Undefined
+
+---------------------------------
+ANGKA
+- akurasi bilangan bulat sampe sampe 15 digit
+- bisa desimal, bisa 17 digit di belakang koma
+- hati-hati kalau pecahan, ada sisanya
+- bisa eksponen, 123e5 = 12300000
+- bisa bilangan negatif
+- bisa bilangan hexadesimal, contoh = 0xFF
+
+ANGKA SPESIAL
+- Infinity
+- -Infinity
+- NaN (not a number)
+
+----------------------------------------------
+OPERATOR PADA JAVASCRIPT
+1. [Binary] Aritmatika (+, -, *, /, %)
+2. [Binary] Penugasan / assignment (=, +=, -=, *=, /=, %=)
+3. [Binary] Perbandingan (==, !=, ===, !==, >, <, >=, <=)
+4. [Binary] Logika (&&, ||, !)
+5. [Binary] String (concatenate -> +, angka kalau ketemu string jadi string)
+6. [Ternary] Kondisional ( (kodisi) ? benar : salah )
+7. [Unary] Typeof ( typeof(operand) )   // penting banget buat debugging
+
+binary : operator yang membutuhkan 2 operand
+unary : operator yang membutuhkan 1 operand
+ternary : operator yang membutuhkan 3 buah operand
+
+operator matematika : +, -, *, /, %
+
+membuat variabel :
+var x // bikin variabel x
+x = 10 // penugasan x jadi 10
+contoh kondisiolnal : (x % 2 == 0) ? "genap" : "ganjil"
+
+--------------------------------------------------------------
+STRING
+
+bisa kutip 2 " " atau kutip 1 ' '
+escape character : 
+\0 = karakter NULL
+\' = kutip 1
+\" = kutip 2
+\\ = backslash \
+\n = new line
+\t = tab
+\b = backspace
+\uXXXX = unicode, untuk menampilkan simbol
+string.length -> menghitung panjang dari sebuah string
+
+---------------------------------------------------------------
+BOOLEAN
+
+nilainya true atau false
+Boolean(nilai)
+contoh Boolean(10<20) -> true
+x = Boolean(10) -> true
+x = Boolean(0) -> false
+x = Boolean(-1) -> true
+referensi lengka video nomor 13, menit ke 5:37
