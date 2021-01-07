@@ -1,3 +1,22 @@
+DAFTAR ISI
+1. TIPE DATA DALAM JAVASCRIPT
+2. ANGKA
+3. OPERATOR PADA JAVASCRIPT
+4. STRING
+5. BOOLEAN
+6. VARIABEL
+7. MENULIS JAVASCRIPT
+8. POPUP BOX
+9. CONTROL FLOW
+10. PENGULANGAN : WHILE
+11. PENGULANGAN : TABEL PENELUSURAN
+12. PENGULANGAN : FOR
+13. PENGKONDISIAN : IF ELSE
+14. PENGKONDISIAN : ELSE IF
+15. PENGKONDISIAN : SWITCH
+16. FUNCTION
+
+-----------------------------------------------------------
 TIPE DATA DALAM JAVASCRIPT
 1. Number - tidak ada integer, hanya ada floating point
 2. String - bisa kutip 1 atau kutip 2
@@ -66,3 +85,167 @@ x = Boolean(10) -> true
 x = Boolean(0) -> false
 x = Boolean(-1) -> true
 referensi lengka video nomor 13, menit ke 5:37
+
+--------------------------------------------------------------
+VARIABEL
+
+yang harus dipahami : deklarasi, inisialisasi, assignment
+contoh -> var x; (deklarasi inisialisasi)
+          x = 20; assignment
+
+keyword inisialisasi : var, let, const
+biasakan variabel pake camelCase
+referensi keyword dan reserved word : video ke 14 menit 6:35
+
+shorthand, kalau bikin banyak variabel. contohnya :
+    var satu = "ini string", dua = 2, tiga = true, empat;
+
+ada yang namanya variable scope, dijelasin nanti
+
+-----------------------------------------------------------
+MENULIS JAVASCRIPT
+
+1. internal : pake tag script. bisa di tag head
+    atribut : type="text/javascript"
+
+2. eksternal : bikin file lain. tagnya dibuat di akhir body.
+    bikin di akhir supaya html diload dulu, baru javascript nya.
+
+-----------------------------------------------------------
+POPUP BOX
+
+popup box / diaglog box adalah window kecil dalam browser yang bisa dimunculkan
+sebagai alat interaksi agar user dapat berdialog dengan halaman web.
+jenis :
+1. alert
+2. prompt
+3. confirm
+
+ALERT
+alert('hello world!');
+hanya ada tombok ok saja
+
+PROMPT
+prompt('masukkan nama :') // mengembalikan nilai hasil input jenisnya string
+ada textbox untuk user memasukkan input
+
+CONFIRM
+confirm("yakin ? "); // mengembalikan nilai boolean, true atau false
+untuk meminta konfirmasi dari user
+
+------------------------------------------------------------------------
+CONTROL FLOW (alur kendali)
+
+1. Normal Flow
+dieksekusi dari atas ke bawah atau dari kiri ke kanan
+yang dibutuhkan : pengulangan dan pengkondisian
+
+PENGULANGAN / LOOP / ITERATION
+ada for, while, do while
+
+PENGKONDISIAN / PERCABANGAN
+keadaan dimana program bisa memilih eksekusi program sesuai kondisi
+ada if, if .. else, if .. else if .. else, switch
+
+---------------------------------------------------------------------------
+PENGULANGAN : WHILE
+
+while(kondisi){
+    aksi
+}
+
+increment bisa pake ++
+decrement bisa pake --
+
+----------------------------------------------------------------------
+PENGULANGAN : TABEL PENELUSURAN
+
+bikin tabel untuk setia interasi
+
+-------------------------------------------------------------------------
+PENGULANGAN : FOR
+
+for (var i = 1; i <= 10; i++){
+    console.log('hello world')
+}
+
+-------------------------------------------------------------------------
+PENGKONDISIAN : IF ELSE
+
+if(kondisi){
+    aksi
+} else {
+    aksi
+}
+
+ingat ada == dan ===
+
+-------------------------------------------------------------------------
+PENGKONDISIAN : ELSE IF
+
+if(kondisi 1){
+    aksi 1
+} else if(kondisi 2){
+    aksi 2
+} else {
+    aksi 3
+}
+
+
+---------------------------------------------------------------------
+PENGKONDISIAN : SWITCH
+
+switch(ekspresi){
+    case "nilai 1" : aksi 1 [break;]
+    case "nilai 2" : aksi 2 [break;]
+    case "nilai 3" : aksi 3 [break;]
+    default: aksi default [break;]
+}
+
+contoh kasus
+switch(angka){
+    case 1: alert('anda memasukkan angka 1'); break;
+    case 2: alert('anda memasukkan angka 2'); break;
+    case 3: alert('anda memasukkan angka 3'); break;
+    default: aler('angka yang ada masukkan salah'); break;
+}
+
+----------------------------------------------------------------------
+FUNCTION
+
+termasuk ke dalam first-class object
+kategori function : built-in function & user-defined function
+
+user-defined function
+- fungsi yang dibuat sendiri
+- menggunakan keyword function
+- ada nama functionnya (optional)
+- parameter / argument
+  disimpan di dalam ()
+  boleh ada boleh tidak, jika ada boleh lebih dari satu
+  dipisahkan oleh koma
+- function body, 'dibungkus' dengan {}
+- dapat mengembalikan nilai (return), atau tidak mengembalikan nilai
+
+cara bikinnya
+- deklarasi
+- ekspresi
+
+contoh deklarasi
+function jumlahDuaBilangan(a, b){
+    var total;
+    total = a + b;
+
+    return total;
+}
+
+contoh ekspresi
+var jumlahDuaBilangan = function(a, b){
+    var total;
+    total = a + b;
+
+    return total;
+}
+
+memanggil / menjalankan function
+alert(jumlahDuaBilangan(1,2));
