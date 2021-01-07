@@ -15,6 +15,8 @@ DAFTAR ISI
 14. PENGKONDISIAN : ELSE IF
 15. PENGKONDISIAN : SWITCH
 16. FUNCTION
+17. REKURSIF
+18. FUNCTION DECLARATION VS. FUNCTION EXPRESSION
 
 -----------------------------------------------------------
 TIPE DATA DALAM JAVASCRIPT
@@ -249,3 +251,55 @@ var jumlahDuaBilangan = function(a, b){
 
 memanggil / menjalankan function
 alert(jumlahDuaBilangan(1,2));
+
+---------------------------------------------------------------------------
+REKURSIF
+
+sebuah fungsi yang memanggil dirinya sendiri
+kondisi berhentinya disebut base case
+
+contoh
+function cetakAngka(n){
+    if ( n === 0) return;
+    console.log(n);
+    cetakAngka(n-1);
+}
+cetakAngka(10);
+
+function faktorial(n){
+    if (n === 0) return 1;
+    return n * faktorial(n-1);
+}
+
+-------------------------------------------------------------------------------
+FUNCTION DECLARATION VS. FUNCTION EXPRESSION
+
+function declaration
+- lebih fleksibel (karena konsep hoisting)
+
+function expression harus disimpan ke dalam variabel
+var tampilpesan = function (nama){
+    alert('Halo ' + nama);
+}
+
+tampilpesan("Difa")
+
+function expression
+harus didefinisikan dulu sebelum dipanggil
+lebih powerfull:
+- sebagai closure
+- argument untuk function lain
+- IIFE (Immediately Invoked Function Expression)
+
+--------------------------------------------------------------------------------
+ARRAY
+
+tipe data yang digunakan untuk mendeskripsikan kumpulan elemen, yang tiap elemen
+mempunyai sesuatu yang dinamakan dengan index.
+contoh
+var hari = ['senin', 'selasa', 'rabu'];
+
+array pada js bertipe object
+memiliki method length untuk menghitung jumlah element di dalamnya
+element pada array boleh memiliki tipe data yang berbeda
+kaya list di python
